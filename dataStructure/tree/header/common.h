@@ -6,3 +6,4 @@ typedef struct BinTree{
 
 TNode *createBT(char *pre,char *in,int L1,int R1,int L2,int R2);
 void inOrder(BTree *p);
+void levelOrder(BTree *bt);

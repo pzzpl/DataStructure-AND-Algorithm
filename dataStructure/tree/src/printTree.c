@@ -6,7 +6,7 @@
     struct BinTree *rchild;
 }BTree,TNode;*/
 
-//ä¸­åº
+//µÝ¹éÖÐÐò±éÀú
 void inOrder(BTree *p){
     if(p != NULL){
         inOrder(p->lchild);

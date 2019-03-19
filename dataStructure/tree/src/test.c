@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "common.h"
 
-//æµ‹è¯•
+
 int main()
 {
 
@@ -10,6 +10,8 @@ int main()
     char *in = "DBEACGFH";
     BTree *t = createBT(pre,in,0,7,0,7);
     inOrder(t);
-
+    putchar('\n');
+    //²âÊÔlevelOrder
+    levelOrder(t);
     return 0;
 }
