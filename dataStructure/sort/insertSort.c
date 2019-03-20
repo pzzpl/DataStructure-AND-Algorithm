@@ -1,15 +1,16 @@
 #include <stdio.h>
 /*
-*²åÈëÅÅĞò
-*ÓĞĞòÇø£¬ºÍÎŞĞòÇø
+*æ’å…¥æ’åº
+*æœ‰åºåŒºï¼Œå’Œæ— åºåŒº
+*æŠ˜åŠæ’å…¥åªæ”¹å˜äº†å…ƒç´ çš„æ¯”è¾ƒæ¬¡æ•°ï¼Œæ²¡æœ‰æ”¹å˜ç§»åŠ¨æ¬¡æ•°ã€‚
 */
 
 
 void insertSort(int *arr,int len){
     int i,j;
     int temp;
-    for(i=1;i<len;i++){//×Ü¹²ÅÅĞòlen-1ÂÖ
-        if(arr[i] < arr[i-1]){//´úÅÅÔªËØ¸Õ¸ÕºÃ´óÓÚ ÓĞĞòÇø×î´óµÄÔªËØ£¬²»ÓÃÅÅ
+    for(i=1;i<len;i++){//æ€»å…±æ’åºlen-1è½®
+        if(arr[i] < arr[i-1]){//ä»£æ’å…ƒç´ åˆšåˆšå¥½å¤§äº æœ‰åºåŒºæœ€å¤§çš„å…ƒç´ ï¼Œä¸ç”¨æ’
             temp = arr[i];
             for(j=i-1;temp < arr[j] && j >=0;j--){
                 arr[j+1] = arr[j];
@@ -31,14 +32,14 @@ int binSearch(int *arr,int key,int begin,int end){
     return begin;
 }
 
-//ÕÛ°ë²åÈëÅÅĞò
+//æŠ˜åŠæ’å…¥æ’åº
 void binInsertSort(int *arr,int len){
     int i,j,insertIndex,temp;
-    for(i=1;i<len;i++){//×Ü¹²ÅÅĞòlen-1ÂÖ
-        if(arr[i] < arr[i-1]){//´úÅÅÔªËØ¸Õ¸ÕºÃ´óÓÚ ÓĞĞòÇø×î´óµÄÔªËØ£¬²»ÓÃÅÅ
+    for(i=1;i<len;i++){//æ€»å…±æ’åºlen-1è½®
+        if(arr[i] < arr[i-1]){//ä»£æ’å…ƒç´ åˆšåˆšå¥½å¤§äº æœ‰åºåŒºæœ€å¤§çš„å…ƒç´ ï¼Œä¸ç”¨æ’
             temp = arr[i];
-            insertIndex = binSearch(arr,temp,0,i-1);//´Ó0~i-1ÖĞÕÒµ½temp²åÈëµÄÎ»ÖÃ
-            //ÕÒµ½ºóÔÙÒÆ¶¯
+            insertIndex = binSearch(arr,temp,0,i-1);//ä»0~i-1ä¸­æ‰¾åˆ°tempæ’å…¥çš„ä½ç½®
+            //æ‰¾åˆ°åå†ç§»åŠ¨
             for(j=i-1;j>=insertIndex;j--){
                 arr[j+1] = arr[j];
             }
