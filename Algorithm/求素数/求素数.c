@@ -9,13 +9,10 @@ int main(){
     scanf("%d",&n);
     int arr1[n+1];
     int arr2[n+1];
-    memset(arr1, 0, n+1);
-
-    /*检查了一下发现memset并没有把整个数列置0 ，这是为什么呢？*/
-    for(int i = 0; i <= n; i++){
-        printf("%d ",arr1[i]);
+   /*方法一，删除倍数法*/
+    for(int i = 0; i <= n; i++){ //因为数组无法整体初始化
+        arr1[i] = 0;
     }
-    memset(arr2, 0, n+1);
     arr1[0] = arr1[1] = 1;
     int j,k;
     for(int i = 2; i <= n; ++i){
