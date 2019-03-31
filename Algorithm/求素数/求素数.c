@@ -8,11 +8,14 @@ int main(){
     printf("please input an N:");
     scanf("%d",&n);
     int arr1[n+1];
-    int arr2[n+1];
-   /*方法一，删除倍数法*/
-    for(int i = 0; i <= n; i++){ //因为数组无法整体初始化
-        arr1[i] = 0;
+    memset(arr1, 0, sizeof(arr1));
+    /*for(int i = 0; i <=n; i++){
+        printf("%d ",arr1[i]);
     }
+    printf("\n***********\n");*/
+    /*方法一，删除倍数法*/
+    int arr2[n+1];
+    memset(arr2, 0, n+1);
     arr1[0] = arr1[1] = 1;
     int j,k;
     for(int i = 2; i <= n; ++i){
